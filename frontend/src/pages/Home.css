@@ -1,0 +1,551 @@
+/* Home.css - Modern CinemaBook Styles with home- prefix */
+
+.home-page {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.home-hero-section {
+  position: relative;
+  height: 600px;
+  background-image: url('https://images.moviesanywhere.com/movie-hero/8c02d0f5e227268f40945fefe914fba8.jpeg?r=16x9&w=2560');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 10;
+}
+
+.home-hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.home-hero-text {
+  max-width: 36rem;
+}
+
+.home-hero-title {
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-hero-subtitle {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.home-hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.home-btn-primary {
+  background: linear-gradient(to right, #9333ea, #7c3aed);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home-btn-primary:hover {
+  background: linear-gradient(to right, #7c3aed, #6d28d9);
+  transform: scale(1.05);
+}
+
+.home-btn-secondary {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.home-hero-poster {
+  width: 320px;
+  height: 450px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.home-hero-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.home-hero-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.home-hero-dot.active {
+  background: #9333ea;
+}
+
+/* Partners Section */
+.home-partners-bar {
+  background: linear-gradient(to right, #9333ea, #7c3aed);
+  padding: 1.5rem 0;
+}
+
+.home-partners-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-partners-content span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Movies Section */
+.home-movies-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.home-section-header h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.home-section-subtitle {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.home-view-all-link {
+  color: #a78bfa;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
+
+.home-view-all-link:hover {
+  color: #c4b5fd;
+}
+
+.home-loading {
+  text-align: center;
+  color: #9ca3af;
+  padding: 3rem 0;
+}
+
+/* Updated Movies Carousel - 5 cards in a row */
+.home-movies-carousel {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.home-movie-card {
+  background: #1f2937;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.home-movie-card:hover {
+  transform: scale(1.05);
+}
+
+.home-movie-poster {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.home-movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-movie-rating-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.home-movie-info {
+  padding: 1rem;
+}
+
+.home-movie-info h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home-movie-genre {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home-star-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.home-star {
+  width: 1rem;
+  height: 1rem;
+  color: #4b5563;
+}
+
+.home-star.filled {
+  color: #fbbf24;
+}
+
+.home-book-ticket-btn {
+  width: 100%;
+  background: #9333ea;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.home-book-ticket-btn:hover {
+  background: #7c3aed;
+}
+
+.home-explore-more-btn {
+  background: #9333ea;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-explore-more-btn:hover {
+  background: #7c3aed;
+}
+
+/* Coming Soon Section */
+.home-coming-soon-section {
+  background: linear-gradient(to bottom, #581c87, #6d28d9);
+  padding: 4rem 0;
+}
+
+.home-coming-soon-section .home-section-subtitle {
+  color: #e9d5ff;
+}
+
+.home-coming-soon-section .home-view-all-link {
+  color: #e9d5ff;
+}
+
+.home-coming-soon-section .home-view-all-link:hover {
+  color: white;
+}
+
+.home-coming-soon-section .home-loading {
+  color: #e9d5ff;
+}
+
+.home-view-all-upcoming-btn {
+  background: #000;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1rem;
+  font-weight: 500;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-view-all-upcoming-btn:hover {
+  background: #1f2937;
+}
+
+/* Testimonials Section */
+.home-testimonials-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.home-testimonials-section h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.home-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-testimonial-card {
+  background: #8B5CF6;
+  color: #000;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.home-testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-testimonial-avatar {
+  width: 4rem;
+  height: 4rem;
+  background: #d1d5db;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.home-testimonial-card h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.home-testimonial-stars {
+  display: flex;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.home-testimonial-stars .home-star {
+  color: #ffffff;
+}
+
+.home-testimonial-text {
+  color: #000000;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.home-testimonial-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.home-testimonial-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #6b7280;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.home-testimonial-dot.active {
+  background: #9333ea;
+}
+
+/* Features Section */
+.home-features-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.home-features-section h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.home-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.home-feature-card {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.home-feature-card:hover {
+  background: #374151;
+}
+
+.home-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.home-feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.home-feature-card p {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-movies-carousel {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-hero-title {
+    font-size: 3rem;
+  }
+  
+  .home-hero-poster {
+    display: none;
+  }
+  
+  .home-movies-carousel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .home-testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .home-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero-content {
+    padding: 0 2rem;
+  }
+  
+  .home-hero-title {
+    font-size: 2rem;
+  }
+  
+  .home-hero-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .home-partners-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .home-partners-content span {
+    font-size: 1rem;
+  }
+  
+  .home-movies-carousel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .home-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .home-features-grid {
+    grid-template-columns: 1fr;
+  }
+}

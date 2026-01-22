@@ -1,0 +1,552 @@
+/* Auth.css - With Swipe Animations */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #2b1055 0%, #000000 100%);
+  padding: 20px;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 650px;
+  display: flex;
+  background-color: #9146ff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 
+    0 50px 100px rgba(0, 0, 0, 0.8),
+    0 30px 80px rgba(145, 70, 255, 0.6),
+    0 20px 60px rgba(139, 92, 246, 0.5),
+    0 10px 40px rgba(124, 58, 237, 0.4);
+}
+
+.auth-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.8),
+    0 15px 50px rgba(139, 92, 246, 0.4),
+    0 10px 35px rgba(124, 58, 237, 0.3);
+}
+
+.welcome-panel-left {
+  border-radius: 0 200px 200px 0 !important;
+}
+
+.welcome-panel-right {
+  border-radius: 200px 0 0 200px !important;
+}
+
+/* Welcome Panel */
+.welcome-panel {
+  flex: 1;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+/* Logo */
+.logo-img {
+  width: 180px;
+  height: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+  filter: brightness(1.2);
+}
+
+.welcome-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.brand-name {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin: 8px 0 20px 0;
+  color: #9146ff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.welcome-text {
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 300px;
+  margin-bottom: 25px;
+}
+
+.switch-btn {
+  padding: 12px 40px;
+  background: transparent;
+  border: 2px solid #8B5CF6;
+  border-radius: 25px;
+  color: #8B5CF6;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.switch-btn:hover {
+  background: #8B5CF6;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+}
+
+/* Form Panel */
+.form-panel {
+  flex: 1;
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  color: white;
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* Social Login */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.social-btn {
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  backdrop-filter: blur(10px);
+}
+
+.social-btn i {
+  font-size: 1.8rem;
+  color: white;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.social-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-6px) scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-btn:hover i {
+  transform: scale(1.1);
+}
+
+/* Divider Text */
+.divider-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 15px 0;
+  text-align: center;
+}
+
+.signup-with-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 8px 0 5px 0;
+  text-align: center;
+}
+
+/* Auth Form */
+.auth-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  color: #333;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input-field::placeholder {
+  color: #666;
+}
+
+.input-field:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px) scale(1.01);
+}
+
+/* Input Row */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.input-field.half {
+  width: 100%;
+}
+
+/* Forgot Link */
+.forgot-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: right;
+  cursor: pointer;
+  padding: 0;
+  margin-top: -6px;
+  display: block;
+  width: 100%;
+}
+
+.forgot-btn:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 14px 35px;
+  background: #000;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  margin-top: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.6);
+}
+
+.submit-btn:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Toggle Link */
+.toggle-link {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.toggle-link span {
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+.toggle-link span:hover {
+  color: #000;
+}
+
+/* Error Message */
+.error-message {
+  width: 100%;
+  background: rgba(255, 68, 68, 0.2);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  text-align: center;
+  border: 1px solid rgba(255, 68, 68, 0.4);
+  backdrop-filter: blur(10px);
+  margin-bottom: 8px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   SWIPE ANIMATIONS - BUTTERY SMOOTH
+============================================ */
+
+/* Slide from Right (Sign Up button clicked) */
+.slide-from-right {
+  animation: slideFromRight 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(120%) scale(0.92) rotateY(-8deg);
+    filter: blur(8px);
+  }
+  30% {
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+/* Slide from Left (Login button clicked) */
+.slide-from-left {
+  animation: slideFromLeft 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-120%) scale(0.92) rotateY(8deg);
+    filter: blur(8px);
+  }
+  30% {
+    filter: blur(4px);
+  }
+  60% {
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateY(0deg);
+    filter: blur(0);
+  }
+}
+
+/* Replace old fade-in with conditional animations */
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+    filter: blur(6px);
+  }
+  50% {
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Loading State */
+.submit-btn:disabled {
+  position: relative;
+}
+
+.submit-btn:disabled::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .auth-container {
+    height: auto;
+    min-height: 600px;
+  }
+
+  .auth-wrapper {
+    flex-direction: column;
+    border-radius: 25px;
+  }
+
+  .welcome-panel-left,
+  .welcome-panel-right {
+    border-radius: 0;
+    min-height: 300px;
+  }
+
+  .form-panel {
+    padding: 40px 35px;
+  }
+
+  .brand-name {
+    font-size: 2.4rem;
+  }
+
+  .form-title {
+    font-size: 2.2rem;
+  }
+
+  /* Mobile: slide from top/bottom instead - BUTTERY SMOOTH */
+  @keyframes slideFromRight {
+    0% {
+      opacity: 0;
+      transform: translateY(80px) scale(0.92);
+      filter: blur(8px);
+    }
+    40% {
+      filter: blur(3px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      opacity: 0;
+      transform: translateY(-80px) scale(0.92);
+      filter: blur(8px);
+    }
+    40% {
+      filter: blur(3px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .auth-page {
+    padding: 10px;
+  }
+
+  .auth-wrapper {
+    border-radius: 20px;
+  }
+
+  .welcome-panel,
+  .form-panel {
+    padding: 35px 25px;
+  }
+
+  .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .brand-name {
+    font-size: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .input-field {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
+
+  .submit-btn,
+  .switch-btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-btn i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 0.85rem;
+  }
+
+  .brand-name {
+    font-size: 1.8rem;
+  }
+
+  .form-title {
+    font-size: 1.6rem;
+  }
+}

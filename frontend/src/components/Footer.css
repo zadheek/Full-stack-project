@@ -1,0 +1,141 @@
+.footer {
+  background: linear-gradient(135deg, #7c3aed 0%, #9333ea 100%);
+  color: white;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Social Media Section */
+.social-section {
+  text-align: center;
+}
+
+.social-title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+/* Navigation Links */
+.footer-nav {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Copyright */
+.footer-copyright {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.footer-copyright p {
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-nav {
+    gap: 25px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+  }
+
+  .social-title {
+    font-size: 16px;
+  }
+
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .footer-copyright {
+    font-size: 12px;
+  }
+}

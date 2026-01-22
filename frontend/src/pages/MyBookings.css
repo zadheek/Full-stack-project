@@ -1,0 +1,280 @@
+.bookings-page {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.bookings-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bookings-wrapper h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 10px 24px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+}
+
+.filters button:hover {
+  background: #252525;
+  border-color: #8B5CF6;
+}
+
+.filters button.active {
+  background: #8B5CF6;
+  border-color: #8B5CF6;
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.empty h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.empty p {
+  color: #888;
+  margin-bottom: 24px;
+}
+
+.empty button {
+  padding: 12px 32px;
+  background: #8B5CF6;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.empty button:hover {
+  background: #8B5CF6;
+}
+
+.bookings-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.booking-card {
+  background: #0f0f0f;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.booking-card:hover {
+  border-color: #444;
+}
+
+.card-content {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+}
+
+.poster {
+  width: 120px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.details h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.value {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.value.ref {
+  font-size: 0.8rem;
+  font-family: monospace;
+  color: #8B5CF6;
+  font-weight: 700;
+}
+
+.value.price {
+  color: #4caf50;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.confirmed {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.badge.pending {
+  background: rgba(255, 187, 51, 0.2);
+  color: #ffbb33;
+  border: 1px solid #ffbb33;
+}
+
+.badge.cancelled {
+  background: rgba(244, 67, 54, 0.2);
+  color: #8B5CF6;
+  border: 1px solid #8B5CF6;
+}
+
+.badge.completed {
+  background: rgba(33, 150, 243, 0.2);
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #0a0a0a;
+  border-top: 1px solid #222;
+}
+
+.actions button {
+  flex: 1;
+  padding: 10px 16px;
+  background: #8B5CF6;
+  border: 1px solid #8B5CF6;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.actions button:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.actions button.cancel {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: #8B5CF6;
+  color: #8B5CF6;
+}
+
+.actions button.cancel:hover {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: #7c3aed;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .bookings-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .poster {
+    width: 150px;
+    height: 220px;
+  }
+
+  .details h3 {
+    text-align: center;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .badges {
+    justify-content: center;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
